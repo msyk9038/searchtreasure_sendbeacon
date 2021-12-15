@@ -1,5 +1,5 @@
 {
-    "name": "searchTreasure_sendBeacon",
+    "name": "宝探し_発信機側",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -15,6 +15,10 @@
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "4.0.16",
+        "targetId": "microbit"
+    },
     "supportedTargets": [
         "microbit"
     ],
