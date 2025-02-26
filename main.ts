@@ -17,14 +17,8 @@ basic.forever(function () {
     basic.pause(200)
 })
 basic.forever(function () {
-    basic.showLeds(`
-        # . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
+    basic.showIcon(IconNames.Heart)
     basic.pause(200)
     basic.clearScreen()
-    basic.pause(200)
+    basic.pause(500)
 })
