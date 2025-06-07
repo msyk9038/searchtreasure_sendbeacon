@@ -1,31 +1,59 @@
+# 宝探しゲーム用のビーコン送信機 (micro:bit)
 
-> Open this page at [https://msyk9038.github.io/searchtreasure_sendbeacon/](https://msyk9038.github.io/searchtreasure_sendbeacon/)
+このプロジェクトは、BBC micro:bitを使用した宝探しゲームのビーコン送信機部分を実装したものです。
 
-## Use as Extension
+## 概要
 
-This repository can be added as an **extension** in MakeCode.
+宝探しゲームで「宝」として隠される送信機として機能するmicro:bitプログラムです。一定間隔で特定の周波数の信号を発信し、受信機がその信号を検出できるようにします。
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/msyk9038/searchtreasure_sendbeacon** and import
+## 機能
 
-## Edit this project ![Build status badge](https://github.com/msyk9038/searchtreasure_sendbeacon/workflows/MakeCode/badge.svg)
+- 一定間隔での無線信号の送信
+- 低消費電力モードによるバッテリー寿命の延長
+- LEDによる動作状態の表示
+- ボタン操作による送信モードの切替
+- 発見された際の特殊表示
 
-To edit this repository in MakeCode.
+## 使用方法
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/msyk9038/searchtreasure_sendbeacon** and click import
+1. [MakeCode エディタ](https://makecode.microbit.org/)を開く
+2. 「読み込む」をクリックし、このリポジトリからダウンロードした .hex ファイルを選択
+3. または、「インポート」→「URLから読み込む」を選択し、このリポジトリのURLを入力
+4. micro:bitにダウンロードして使用
+5. 電源を入れると自動的に送信モードになります
+6. 隠す場所に設置して宝探しゲームを開始します
 
-## Blocks preview
+## ハードウェア要件
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
+- BBC micro:bit
+- 電源（電池ボックスが推奨）
 
-![A rendered view of the blocks](https://github.com/msyk9038/searchtreasure_sendbeacon/raw/master/.github/makecode/blocks.png)
+## 関連プロジェクト
 
-#### Metadata (used for search, rendering)
+- [宝探しゲーム用のビーコン受信機](https://github.com/msyk9038/searchtreasure_receivebeacon) - 対となる受信機プログラム
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+## ゲームの準備
+
+1. 送信機をプログラムしたmicro:bitを電池ボックスに接続
+2. 隠したい場所に設置
+3. 受信機を持ったプレイヤーに探してもらう
+
+## カスタマイズ
+
+コード内の以下の値を変更することで、ゲームの難易度を調整できます：
+
+- 送信周波数（受信機と同じ値に設定する必要があります）
+- 送信間隔
+- 送信出力強度
+
+## バッテリー寿命
+
+標準的な設定では、単三電池2本の電池ボックスで約8時間の連続動作が可能です。低消費電力モードを有効にすることで、さらに長時間の動作が可能になります。
+
+## ライセンス
+
+MIT
+
+## 作者
+
+msyk9038
